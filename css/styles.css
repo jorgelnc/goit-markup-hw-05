@@ -1,5 +1,5 @@
 :root {
-    --color-main: #2196F3;
+    --color-main: rgb(33, 150, 243);
     --color-secondary: #757575;
     --color-background-sections: rgb(47, 48, 58);
     --color-text-main: #212121;
@@ -8,6 +8,7 @@
     --color-active: #0000ff;
     --color-border-head: #ECECEC;
     --color-border-clients: #adb1b8;
+    --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,h2,h3,h4,h5,h6,p{
@@ -32,10 +33,11 @@ address{
     font-style: normal;
 }
 
-.link{
+.link {
     text-decoration: none;
     color: inherit;
     color: var(--color-text-main);
+    transition: color 250ms var(--cubic);
 }
 
 .list{
@@ -79,8 +81,23 @@ margin: auto;
     margin-right: 18rem;
     display: flex;
     justify-content: space-between;
-    padding: 30px;  
-}
+    padding: 30px;
+    position: relative; 
+    }
+
+.line-link:hover:after {
+    content: "";
+    background-image: url(../images/line-svg.svg);
+    background-color: var(--color-main);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 65px;
+    height: 5px;
+    position: absolute;
+    bottom: -4px;
+    display: flex;
+    justify-content: center;
+   }
 
 .informative-data {
     display: flex;
@@ -99,6 +116,7 @@ text-decoration: none;
     font-size: 14px;
     line-height: 1.1;
     text-decoration: none;
+    transition: color 250ms var(--cubic);
 }
 
 .link-contacts:hover, .link-contacts:focus {
@@ -153,6 +171,7 @@ text-decoration: none;
     padding: 10px;
     border-style: none;
     cursor: pointer;
+    transition: fill 250ms var(--cubic), background-color 250ms var(--cubic);
 }
 
 .service-button[value="Solicitar un Servicio"]:hover, .service-button[value="Solicitar un Servicio"]:focus {
@@ -165,6 +184,7 @@ text-decoration: none;
     border-style: none;
     border-radius: 4px;
     padding: 10px;
+    transition: fill 250ms var(--cubic), background-color 250ms var(--cubic);
 }
 .button:hover, .button:focus {
     background-color: var(--color-main);
@@ -311,10 +331,14 @@ text-decoration: none;
     padding: 6px;
 }
 
+.icon-socialmedia {
+    transition: fill 250ms var(--cubic), background-color 250ms var(--cubic);
+}
+
 .icon-regulars-clients:hover, .icon-regulars-clients:focus{
     fill: var(--color-main);
     border-color: var(--color-main);
-} 
+}
 
 /*seccion Clientes Regulares */
 
@@ -344,12 +368,9 @@ text-decoration: none;
     background-color: var(--color-text-light);
     border: 1px var(--color-border-clients) solid;
     border-radius: 4px;
-}
-
-.icon-regulars-clients {
+    transition: fill 250ms var(--cubic), background-color 250ms var(--cubic);
     padding: 10px;
 }
-
 
 /*Seccion del Footer*/
 
@@ -376,6 +397,7 @@ text-decoration: none;
     font-weight: 400;
     color: var(--color-text-light);
     text-decoration: none;
+    transition: color 250ms var(--cubic);
 }
 .link-address:hover, .link-address:focus {
     color: var(--color-main);
@@ -416,6 +438,7 @@ color: var(--color-secondary);
 line-height: 1.8;
 padding: 15px;
 }
+
 .plataforms-descriptions >li >h2 {
     font-family: inherit;
     font-size: 18px;
@@ -427,16 +450,32 @@ padding: 15px;
     border: 1px solid var(--color-secondary);
     border-style: none;
     margin-top: 20px;
-    box-shadow: 0px 1px 4px var(--color-secondary); 
+    box-shadow: 0px 1px 4px var(--color-secondary);
+    transition: box-shadow 250ms var(--cubic);
+    position: relative;
+    width: 370px;
 }
 
-.plataforms-descriptions >li:hover  {
+.plataforms-descriptions >li:hover {
     font-family: inherit;
     font-size: 18px;
     border: 1px solid var(--color-secondary);
     border-style: none;
     box-shadow: 2px 2px 4px var(--color-secondary);
     cursor: pointer;
+    
+}
+
+.descriptions-cards {
+    width: 370px;
+    height: 294px;
+    background-color: rgba(33,150,243,0.7);
+    position: absolute;
+    top: 0;
+}
+
+.descriptions-cards:hover {
+    transform: translateY(370px);
 }
 
 .current {
@@ -490,6 +529,7 @@ padding: 15px;
     width: 40px;
     height: 35px;
     padding: 6px;
+     transition: fill 250ms var(--cubic), background-color 250ms var(--cubic);
 }
 
 .icon-socialmedia-foot:hover, .icon-socialmedia-foot:focus {
