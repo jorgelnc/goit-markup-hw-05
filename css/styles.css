@@ -476,7 +476,8 @@ padding: 15px;
     height: 294px;
     background-color: rgba(33,150,243,0.7);
     position: absolute;
-    bottom: 370px;
+    bottom: -370px;
+    text-align: center;
 }
 
 .descriptions-cards {
