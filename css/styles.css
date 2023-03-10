@@ -602,8 +602,15 @@ pointer-events:none;
 }
 
 .data-modal-close {
+    color: var(--color-text-main);
     position: absolute;
     right: 10px;
     top: 10px;
-    padding: 5px;
+    background-color: var(--color-text-light);
+    border: 1px solid var(--color-border-clients);
+    border-radius: 100%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    text-align: center;
 }

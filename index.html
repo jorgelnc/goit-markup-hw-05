@@ -57,6 +57,7 @@
             type="button"
             class="service-button"
             value="Solicitar un Servicio"
+            data-modal-open
           />
         </p>
       </section>
@@ -309,10 +310,9 @@
         </div>
       </article>
     </footer>
-    <button class="data-modal-open"></button>
     <div class="Backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="data-modal-close"></button>
+        <button class="data-modal-close" data-modal-close>x</button>
       </div>
     </div>
     <script src="./js/modal.js"></script>
