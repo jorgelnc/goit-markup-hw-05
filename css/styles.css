@@ -223,6 +223,10 @@ text-decoration: none;
 
 }
 
+.advantage-section {
+    padding-bottom: 0;
+}
+
 .advantages-list-main {
     display: flex;
     justify-content: space-between;
@@ -287,6 +291,7 @@ text-decoration: none;
     font-size: 36px;
     line-height: 1.1;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 .professionals-team > h2 {
@@ -294,23 +299,20 @@ text-decoration: none;
     line-height: 1.1;
     margin-bottom: 50px;
     font-family: inherit;
+    text-align: center;
 }
 
 .professionals-team {
     background-color: var(--color-secondary-back);
-    padding-top: 94px;
-    padding-bottom: 94px;
     }
 
-.professional-card h3 {
+.card-professional-content h3 {
     font-family: inherit;
     font-size: 16px;
     font-weight: 500;
-    margin-top: 30px;
 }
 
 .professional-card p {
-    margin: 0 auto;
     color: var(--color-secondary);
     font-size: 16px;
     line-height: 1.1;
@@ -328,6 +330,16 @@ text-decoration: none;
     gap: 20px;
 }
 
+.professionals-list > li {
+    flex-basis: calc((100% - 90) / 4);
+}
+
+
+.card-professional-content {
+    padding: 30px 45px;
+    text-align: center;
+}
+
 .professional-card {
     margin: 0 auto;
     background-color: var(--color-text-light);
@@ -336,12 +348,10 @@ text-decoration: none;
 }
 
 .icons-socialmedia-group {
-    width: 270px;
-    height: 60px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 15px;
+    margin-top: 16px;
 }
 
 .icon-socialmedia:hover, .icon-socialmedia:focus {
@@ -493,6 +503,7 @@ font-weight: 400;
     transition: box-shadow 250ms var(--cubic), transform 250ms var(--cubic);
     position: relative;
     overflow: hidden;
+    flex-basis: calc((100% - 60) / 3);
 }
 
 .card-descrip:hover {
@@ -527,6 +538,8 @@ font-weight: 400;
     padding: 30px;
     transform: translateY(100%);
     transition: transform 250ms var(--cubic);
+    font-family: inherit;
+    font-size: 18px;
 }
 
 .current {
