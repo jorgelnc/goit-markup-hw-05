@@ -81,7 +81,6 @@ padding: 0 15px;
     text-decoration: none;
     padding: 20px;
     margin-right: auto;
-    margin-left: auto;
     }
 
 .principal-options {
@@ -120,7 +119,6 @@ padding: 0 15px;
 .informative-data {
     display: flex;
     margin-left: auto;
-    margin-right: auto;
     padding-top: 32px;
     padding-bottom: 32px;
     font-weight: 500;
@@ -158,9 +156,6 @@ text-decoration: none;
 
 .headermain-section {
     padding-top: 0;
-}
-
-.main-section {
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: linear-gradient(to right,rgba(47,48,58,0.3), rgba(47,48,58,0.4)),url(../images/backgroundmain.jpg);
@@ -169,10 +164,8 @@ text-decoration: none;
     background-attachment: fixed;
 }
 
-/* Preguntar a Alona porque no me toma el margin auto para el button*/
 .container-service-button{
-     padding-top: 40px;
-     margin: auto;
+     margin-top: 40px;
      text-align: center;
 }
 
@@ -196,7 +189,7 @@ text-decoration: none;
     font-family: inherit;
     color: #FFFFFF;
     border-radius: 4px;
-    padding: 10px;
+    padding: 10px 2px;
     border-style: none;
     cursor: pointer;
     box-shadow: 1px 1px 2px 1px var(--color-text-main);
@@ -294,7 +287,7 @@ text-decoration: none;
     text-align: center;
 }
 
-.professionals-team > h2 {
+.secondary-title {
     font-size: 36px;
     line-height: 1.1;
     margin-bottom: 50px;
@@ -331,12 +324,12 @@ text-decoration: none;
 }
 
 .professionals-list > li {
-    flex-basis: calc((100% - 90) / 4);
+    flex-basis: calc((100% - 90px) / 4);
 }
 
 
 .card-professional-content {
-    padding: 30px 45px;
+    padding: 30px 32px;
     text-align: center;
 }
 
@@ -359,20 +352,19 @@ text-decoration: none;
     border-radius: 100%;
     border-style: none;
     fill: var(--color-text-light);
-    overflow: visible;
-    width: 40px;
-    height: 35px;
-    padding: 6px;
+    width: 44px;
+    height: 44px;
 }
 
 .icon-socialmedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    border-radius: 100%;
+    border-style: none;
     fill: var(--svg--section);
     transition: fill 250ms var(--cubic), background-color 250ms var(--cubic);
-}
-
-.icon-regulars-clients:hover, .icon-regulars-clients:focus{
-    fill: var(--color-main);
-    border-color: var(--color-main);
 }
 
 /*seccion Clientes Regulares */
@@ -397,14 +389,20 @@ text-decoration: none;
 }
 
 .icon-regulars-clients {
-    width: 170px;
-    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--color-text-light);
     border: 1px var(--color-border-clients) solid;
     border-radius: 4px;
     transition: fill 250ms var(--cubic), background-color 250ms var(--cubic);
-    padding: 10px;
+    padding: 10px 60px;
     fill: var(--svg--section);
+}
+
+.icon-regulars-clients:hover, .icon-regulars-clients:focus{
+    fill: var(--color-main);
+    border-color: var(--color-main);
 }
 
 /*Seccion del Footer*/
@@ -471,6 +469,25 @@ text-decoration: none;
     gap: 10px;
 }
 
+.icon-socialmedia-foot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: var(--color-text-light);
+    background-color: var(--background-icon-foot);
+    border-radius: 100%;
+    padding: 12px;
+    transition: fill 250ms var(--cubic), background-color 250ms var(--cubic);
+}
+
+.icon-socialmedia-foot:hover, .icon-socialmedia-foot:focus {
+    fill: var(--color-text-light);
+    background-color: var(--color-main);
+    border-radius: 100%;
+    width: 44px;
+    height: 44px;
+}
+
 /*Seccion principal Portfolio */
 
 .card-text > p {
@@ -501,9 +518,7 @@ font-weight: 400;
     margin-top: 20px;
     box-shadow: 0px 1px 4px var(--color-secondary);
     transition: box-shadow 250ms var(--cubic), transform 250ms var(--cubic);
-    position: relative;
-    overflow: hidden;
-    flex-basis: calc((100% - 60) / 3);
+    flex-basis: calc((100% - 60px) / 3);
 }
 
 .card-descrip:hover {
@@ -607,27 +622,6 @@ font-weight: 400;
     border-bottom: 1px solid var(--color-border-head);
 }
 
-.icon-socialmedia-foot {
-    fill: var(--color-text-light);
-    background-color: var(--background-icon-foot);
-    border-radius: 100%;
-    overflow: visible;
-    width: 40px;
-    height: 35px;
-    padding: 6px;
-    transition: fill 250ms var(--cubic), background-color 250ms var(--cubic);
-}
-
-.icon-socialmedia-foot:hover, .icon-socialmedia-foot:focus {
-    fill: var(--color-text-light);
-    background-color: var(--color-main);
-    border-radius: 100%;
-    overflow: visible;
-    width: 40px;
-    height: 35px;
-    padding: 6px;
-}
-
 svg:hover {
     cursor: pointer;
 }
@@ -645,8 +639,8 @@ transition: opacity 250ms var(--cubic), visibility 250ms var(--cubic);
 }
 
 .modal {
-width: 500px;
-height: 500px;
+width: 528px;
+height: 581px;
 background-color: var(--color-text-light);
 position: fixed;
 top: 50%;
