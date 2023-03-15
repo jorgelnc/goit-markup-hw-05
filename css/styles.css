@@ -427,6 +427,10 @@ text-decoration: none;
     margin-right: 70px;
 }
 
+.content-address {
+    display: flex;
+}
+
 .link-address {
     font-style: normal;
     font-weight: 400;
@@ -453,8 +457,6 @@ text-decoration: none;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    padding-right: 500px;
-    padding-top: 12px;
 }
 .footer-contact-socialmedia > h3 {
     color: var(--color-text-light);  
@@ -666,4 +668,10 @@ pointer-events:none;
     height: 24px;
     cursor: pointer;
     text-align: center;
+    transition: text-shadow 250ms var(--cubic), border-color 250ms var(--color-main);
+}
+
+.data-modal-close:hover {
+    border-color: var(--color-main);
+    text-shadow: 0.5px 0.5px 1px var(--color-main);
 }
